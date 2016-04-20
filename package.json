@@ -1,6 +1,6 @@
 {
   "name": "react-cdnvision",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Resize, crop, and process images in the cloud, simply by changing their URLs",
   "author": {
     "name": "Zlatko Fedor",
