@@ -41,6 +41,8 @@ export default class Img extends Component {
 
     const imgProps = {
       ...this.props,
+      width: void 0,
+      height: void 0,
       options: void 0,
       name: void 0,
       gravity: void 0,
