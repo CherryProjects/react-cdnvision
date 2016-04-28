@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Provider from './Provider';
 
 const defaultStyle = {
@@ -6,7 +6,7 @@ const defaultStyle = {
   backgroundPosition: 'center',
 };
 
-export default class Cover {
+export default class Cover extends Component {
   static contextTypes = {
     ...Provider.childContextTypes,
   };

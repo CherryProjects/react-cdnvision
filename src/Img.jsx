@@ -1,7 +1,7 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Provider from './Provider';
 
-export default class Img {
+export default class Img extends Component {
   static contextTypes = {
     ...Provider.childContextTypes,
   };
