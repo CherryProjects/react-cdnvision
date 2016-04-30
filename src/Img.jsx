@@ -10,8 +10,14 @@ export default class Img extends Component {
   static propTypes = {
     src: PropTypes.string.isRequired,
     alt: PropTypes.string,
-    width: PropTypes.number,
-    height: PropTypes.number,
+    width: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]),
+    height: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]),
     options: PropTypes.object,
 
     gravity: PropTypes.string,
