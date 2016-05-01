@@ -18,6 +18,10 @@ export default class Img extends Component {
       PropTypes.string,
       PropTypes.number,
     ]),
+    quality: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number,
+    ]),
     options: PropTypes.object,
 
     gravity: PropTypes.string,
@@ -29,7 +33,7 @@ export default class Img extends Component {
   };
 
   render() {
-    const { src, alt, options = {}, width, height, name, protocol, gravity, fit, limit } = this.props;
+    const { src, alt, options = {}, width, height, name, protocol, gravity, fit, limit, quality } = this.props;
 
     const cdnVisionClient = name
       ? new Client({ name, protocol })
@@ -41,6 +45,7 @@ export default class Img extends Component {
       gravity,
       fit,
       limit,
+      quality,
       ...options,
       path: src,
     });
@@ -54,6 +59,7 @@ export default class Img extends Component {
       gravity: void 0,
       fit: void 0,
       limit: void 0,
+      quality: void 0,
     };
 
     return <img {...imgProps} src={url} alt={alt} />;
