@@ -1,6 +1,6 @@
 {
   "name": "react-cdnvision",
-  "version": "0.1.15",
+  "version": "0.1.17",
   "description": "Resize, crop, and process images in the cloud, simply by changing their URLs",
   "author": {
     "name": "Zlatko Fedor",
@@ -37,7 +37,8 @@
   "dependencies": {
     "cdnvision": "^0.1.8",
     "hoist-non-react-statics": "^1.0.5",
-    "lodash": "^4.11.1"
+    "lodash": "^4.11.1",
+    "inherits": "^2.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.7.7",
