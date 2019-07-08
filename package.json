@@ -30,17 +30,19 @@
     "node": ">= 0.10.0"
   },
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublish": "npm run snyk-protect; npm run build",
     "test": "babel-node ./node_modules/gulp/bin/gulp.js test",
     "build": "babel-node ./node_modules/gulp/bin/gulp.js build",
-    "eslint": "node ./node_modules/eslint/bin/eslint.js --ext .js,.jsx ."
+    "eslint": "node ./node_modules/eslint/bin/eslint.js --ext .js,.jsx .",
+    "snyk-protect": "snyk protect"
   },
   "dependencies": {
     "cdnvision": "^0.1.8",
     "hoist-non-react-statics": "^1.2.0",
     "lodash": "^4.17.4",
     "inherits": "^2.0.3",
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.5.10",
+    "snyk": "^1.192.4"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -69,5 +71,6 @@
   },
   "peerDependencies": {
     "react": "15.x"
-  }
+  },
+  "snyk": true
 }
